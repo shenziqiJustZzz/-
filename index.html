@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>游戏抽奖画面</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --text: #1d2430;
+      --muted: #657083;
+      --panel: #ffffff;
+      --line: #d9dee8;
+      --accent: #2d6cdf;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+    }
+
+    header {
+      padding: 8px 0 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: 0;
+    }
+
+    .game-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .game-list li {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      padding: 6px 12px;
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .video-item {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .video-title {
+      margin: 0;
+      padding: 14px 16px;
+      font-size: 18px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--line);
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #111827;
+    }
+
+    .video-summary {
+      margin: 0;
+      padding: 12px 16px 14px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #eef4ff;
+      color: var(--accent);
+      font-size: 12px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>游戏抽奖画面</h1>
+      <ul class="game-list" aria-label="游戏列表">
+        <li>火影忍者</li>
+        <li>无尽冬日</li>
+        <li>和平精英</li>
+        <li>穿越火线</li>
+        <li>第五人格</li>
+        <li>我的花园世界</li>
+        <li>使命召唤手游</li>
+        <li>QQ飞车</li>
+        <li>斗地主</li>
+        <li>捕鱼大咖</li>
+        <li>梦幻西游手游</li>
+      </ul>
+    </header>
+
+    <section class="video-grid" aria-label="抽奖视频">
+      <article class="video-item">
+        <h2 class="video-title">火影忍者</h2>
+        <video src="gacha-video-assets/naruto.mp4" controls preload="metadata"></video>
+        <p class="video-summary">抽奖动画较短，结果展示直接清楚。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">无尽冬日</h2>
+        <video src="gacha-video-assets/whiteout-survival.mp4" controls preload="metadata"></video>
+        <p class="video-summary">抽卡界面简洁，动画流程较短。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">和平精英<span class="tag">军需</span></h2>
+        <video src="gacha-video-assets/peace-elite-supply.mp4" controls preload="metadata"></video>
+        <p class="video-summary">奖品罗列清晰，展示直观。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">和平精英<span class="tag">夺宝</span></h2>
+        <video src="gacha-video-assets/peace-elite-treasure.mp4" controls preload="metadata"></video>
+        <p class="video-summary">界面契合大奖氛围，动画冲击感强。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">穿越火线</h2>
+        <video src="gacha-video-assets/crossfire.mp4" controls preload="metadata"></video>
+        <p class="video-summary">界面契合大奖氛围，奖品展示突出。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">第五人格</h2>
+        <video src="gacha-video-assets/identity-v.mp4" controls preload="metadata"></video>
+        <p class="video-summary">抽奖动画不明显，结果罗列直接。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">我的花园世界</h2>
+        <video src="gacha-video-assets/my-garden-world.mp4" controls preload="metadata"></video>
+        <p class="video-summary">抽奖动画较短，画面质感偏弱。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">使命召唤手游</h2>
+        <video src="gacha-video-assets/call-of-duty-mobile.mp4" controls preload="metadata"></video>
+        <p class="video-summary">抽取过程清晰，流程一目了然。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">使命召唤手游<span class="tag">另一个抽奖</span></h2>
+        <video src="gacha-video-assets/call-of-duty-mobile-alt.mp4" controls preload="metadata"></video>
+        <p class="video-summary">抽取过程清晰，奖品展示直观。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">QQ飞车</h2>
+        <video src="gacha-video-assets/qq-speed.mp4" controls preload="metadata"></video>
+        <p class="video-summary">大小奖在抽奖界面没有直接颜色区别。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">斗地主</h2>
+        <video src="gacha-video-assets/dou-dizhu.mp4" controls preload="metadata"></video>
+        <p class="video-summary">大小奖结果界面颜色区分明显，劲舞团可以参考奖项设置。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">捕鱼大咖</h2>
+        <video src="gacha-video-assets/fishing-master.mp4" controls preload="metadata"></video>
+        <p class="video-summary">游戏受众群体相近，大小奖区分清晰。</p>
+      </article>
+
+      <article class="video-item">
+        <h2 class="video-title">梦幻西游手游</h2>
+        <video src="gacha-video-assets/fantasy-westward-mobile.mp4" controls preload="metadata"></video>
+        <p class="video-summary">保底形式新颖，抽奖风格独特。</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
